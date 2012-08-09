@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html >
+<html >
+<head>
+    <title>Getting started with Web GL</title>
+
+    <script src="init.js" type="text/javascript"></script>
+</head>
+<body onload="start()">
+
+<div>
+    <canvas id="myCanvas" width="640" height="480">
+        Canvas not supported.
+    </canvas>
+</div>
+
+
+<!-- WEB GL SHADERS -->
+
+<!-- Set Pixel Color. Fragment Shader -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+        void main(void) {
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        }
+    </script>
+
+<!-- Set Pixel Shape, Position. Vertex Shader -->
+<script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec3 aVertexPosition;
+
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+
+    void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    }
+</script>
+
+
+
+</body>
+</html>
