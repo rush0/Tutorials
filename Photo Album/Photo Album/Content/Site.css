@@ -1,0 +1,17 @@
+
+#album {
+    width:900px;
+}
+
+#album figure {
+width:200px;
+display:block;
+float:left;
+margin:20px;
+padding:20px;
+}
+
+#album img {
+    max-width:200px;
+    max-height:200px;
+}

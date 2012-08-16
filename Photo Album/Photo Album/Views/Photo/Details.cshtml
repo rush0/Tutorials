@@ -1,0 +1,45 @@
+﻿@model Photo_Album.Models.Photo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Photo</legend>
+
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">filename</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.filename)
+    </div>
+
+    <div class="display-label">caption</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.caption)
+    </div>
+
+    <div class="display-label">photographer</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.photographer)
+    </div>
+
+    <div class="display-label">license</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.license)
+    </div>
+
+    <div class="display-label">album</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.album)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
